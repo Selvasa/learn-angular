@@ -3,29 +3,19 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "learn-angular": {
+    "first-angular": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/learn-angular",
+            "outputPath": "dist/first-angular",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -56,9 +46,12 @@
               "outputHashing": "all"
             },
             "development": {
+              "buildOptimizer": false,
               "optimization": false,
+              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -67,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "learn-angular:build:production"
+              "browserTarget": "first-angular:build:production"
             },
             "development": {
-              "buildTarget": "learn-angular:build:development"
+              "browserTarget": "first-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "learn-angular:build"
+            "browserTarget": "first-angular:build"
           }
         },
         "test": {
@@ -101,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "6d5b44e7-cafd-4bb1-8025-7cd2e1a243e7"
   }
 }
