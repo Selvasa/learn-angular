@@ -1,0 +1,46 @@
+.container{
+}
+.flex{
+    border: 2px solid red;
+    height: 200px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    align-items:center ;
+    justify-content: center;
+    /* align-content:center; */
+
+}
+.box{
+    padding: 10px;
+    color: antiquewhite;
+    font-weight: 700;
+    /* width: 100px; */
+}
+.box1{
+    background-color: rgb(255, 127, 127);
+}
+.box2{
+    background-color: red;
+}
+.box3{
+    background-color: blue;
+}
+.box4{
+    background-color: violet;
+}
+.box5{
+    background-color: purple;
+}
+.box6{
+    background-color: pink;
+}
+.box7{
+    background-color: green;
+}
+.box8{
+    background-color: tomato;
+}
+.box9{
+    background-color: teal;
+}
